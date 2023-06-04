@@ -13,7 +13,7 @@ import web3 from "../web3.js";
 import SpinnerBar from "./CustomSpinner.js";
 import { locale } from "moment";
 
-const factoryAddress = "0xE088132c73eB9F4a99878C0248Cd00B0a7E45B57";
+const factoryAddress = "0x91d14bcc160e7011458Bd33640BD4e1219dbDb4c";
 const compiledFactory = require("../ethereum/build/ElectionFactory.json");
 
 const Elections = (props) => {
@@ -186,6 +186,9 @@ const Elections = (props) => {
                 disabled={loading}
               >
                 {create ? "Cancel" : "Create Election"}
+              </Button>
+              <Button onClick={() => {window.location.href='http://localhost:3000/' }} className='hi' >
+                create funding campaign 
               </Button>
             </Col>
           </Row>
